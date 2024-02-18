@@ -10,11 +10,11 @@ class AccessoryService {
     return accessory;
   };
 
-  accessorysList = async (req: Request) => {
-    const accessorys: Accessory[] = await accessoryRepository.all();
+  accessoriesList = async (req: Request) => {
+    const accessories: Accessory[] = await accessoryRepository.all();
     return {
       status: 200,
-      accessorys: accessorys,
+      accessories: accessories,
     };
   };
 

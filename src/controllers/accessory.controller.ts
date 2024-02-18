@@ -7,9 +7,9 @@ class AccessoryController {
     return res.status(201).json(accessory);
   };
 
-  accessorysList = async (req: Request, res: Response) => {
-    const { status, accessorys } = await accessoryService.accessorysList(req);
-    return res.status(status).json(accessorys);
+  accessoriesList = async (req: Request, res: Response) => {
+    const { status, accessories } = await accessoryService.accessoriesList(req);
+    return res.status(status).json(accessories);
   };
 
   accessoryLoader = async (req: Request, res: Response) => {
