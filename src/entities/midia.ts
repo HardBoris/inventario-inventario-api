@@ -3,12 +3,12 @@ import { Item } from "./item";
 
 @ChildEntity()
 export class Midia extends Item {
-  @Column()
+  @Column({ type: "float" })
   width: number;
 
-  @Column()
+  @Column({ type: "float" })
   height: number;
 
-  @Column()
+  @Column({ type: "float" })
   thickness: number;
 }

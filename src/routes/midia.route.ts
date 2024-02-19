@@ -7,8 +7,8 @@ midiaRouter.post("/inventario/midias/register", midiaController.midiaCreator);
 
 midiaRouter.get("/inventario/midias", midiaController.midiasList);
 
-midiaRouter.get("/inventario/midias/:midiaId", midiaController.midiaLoader);
+midiaRouter.get("/inventario/midias/:itemId", midiaController.midiaLoader);
 
-midiaRouter.delete("/inventario/midias/:midiaId", midiaController.midiaDeletor);
+midiaRouter.delete("/inventario/midias/:itemId", midiaController.midiaDeletor);
 
 export default midiaRouter;

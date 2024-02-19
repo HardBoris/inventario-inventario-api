@@ -20,7 +20,7 @@ class MidiaService {
 
   midiaLoader = async (req: Request) => {
     const midia: Midia = await midiaRepository.findOne({
-      midiaId: req.params.midiaId,
+      itemId: req.params.itemId,
     });
     return {
       status: 200,
@@ -30,14 +30,14 @@ class MidiaService {
 
   midiaDeletor = async (req: Request) => {
     const midia: Midia = await midiaRepository.findOne({
-      midiaId: req.params.midiaId,
+      itemId: req.params.itemId,
     });
 
     if (!midia) {
       throw new ErrorHandler(404, "Midia not Found");
     }
 
-    await midiaRepository.delete(req.params.midiaId);
+    await midiaRepository.delete(req.params.itemId);
 
     return {
       status: 200,

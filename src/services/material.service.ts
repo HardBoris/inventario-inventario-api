@@ -20,7 +20,7 @@ class MaterialService {
 
   materialLoader = async (req: Request) => {
     const material: Material = await materialRepository.findOne({
-      materialId: req.params.materialId,
+      itemId: req.params.itemId,
     });
     return {
       status: 200,
@@ -30,14 +30,14 @@ class MaterialService {
 
   materialDeletor = async (req: Request) => {
     const material: Material = await materialRepository.findOne({
-      materialId: req.params.materialId,
+      itemId: req.params.itemId,
     });
 
     if (!material) {
       throw new ErrorHandler(404, "Material not Found");
     }
 
-    await materialRepository.delete(req.params.materialId);
+    await materialRepository.delete(req.params.itemId);
 
     return {
       status: 200,

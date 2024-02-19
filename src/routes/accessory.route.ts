@@ -14,12 +14,12 @@ accessoryRouter.get(
 );
 
 accessoryRouter.get(
-  "/inventario/accessories/:accessoryId",
+  "/inventario/accessories/:itemId",
   accessoryController.accessoryLoader
 );
 
 accessoryRouter.delete(
-  "/inventario/accessories/:accessoryId",
+  "/inventario/accessories/:itemId",
   accessoryController.accessoryDeletor
 );
 

@@ -20,7 +20,7 @@ class AccessoryService {
 
   accessoryLoader = async (req: Request) => {
     const accessory: Accessory = await accessoryRepository.findOne({
-      accessoryId: req.params.accessoryId,
+      itemId: req.params.itemId,
     });
     return {
       status: 200,
@@ -30,14 +30,14 @@ class AccessoryService {
 
   accessoryDeletor = async (req: Request) => {
     const accessory: Accessory = await accessoryRepository.findOne({
-      accessoryId: req.params.accessoryId,
+      itemId: req.params.itemId,
     });
 
     if (!accessory) {
       throw new ErrorHandler(404, "Accessory not Found");
     }
 
-    await accessoryRepository.delete(req.params.accessoryId);
+    await accessoryRepository.delete(req.params.itemId);
 
     return {
       status: 200,

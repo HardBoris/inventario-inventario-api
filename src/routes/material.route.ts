@@ -11,12 +11,12 @@ materialRouter.post(
 materialRouter.get("/inventario/materials", materialController.materialsList);
 
 materialRouter.get(
-  "/inventario/materials/:materialId",
+  "/inventario/materials/:itemId",
   materialController.materialLoader
 );
 
 materialRouter.delete(
-  "/inventario/materials/:materialId",
+  "/inventario/materials/:itemId",
   materialController.materialDeletor
 );
 

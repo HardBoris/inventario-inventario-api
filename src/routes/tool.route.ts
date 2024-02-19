@@ -7,8 +7,8 @@ toolRouter.post("/inventario/tools/register", toolController.toolCreator);
 
 toolRouter.get("/inventario/tools", toolController.toolsList);
 
-toolRouter.get("/inventario/tools/:toolId", toolController.toolLoader);
+toolRouter.get("/inventario/tools/:itemId", toolController.toolLoader);
 
-toolRouter.delete("/inventario/tools/:toolId", toolController.toolDeletor);
+toolRouter.delete("/inventario/tools/:itemId", toolController.toolDeletor);
 
 export default toolRouter;

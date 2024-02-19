@@ -20,7 +20,7 @@ class ToolService {
 
   toolLoader = async (req: Request) => {
     const tool: Tool = await toolRepository.findOne({
-      toolId: req.params.toolId,
+      itemId: req.params.itemId,
     });
     return {
       status: 200,
@@ -30,14 +30,14 @@ class ToolService {
 
   toolDeletor = async (req: Request) => {
     const tool: Tool = await toolRepository.findOne({
-      toolId: req.params.toolId,
+      itemId: req.params.itemId,
     });
 
     if (!tool) {
       throw new ErrorHandler(404, "Tool not Found");
     }
 
-    await toolRepository.delete(req.params.toolId);
+    await toolRepository.delete(req.params.itemId);
 
     return {
       status: 200,
