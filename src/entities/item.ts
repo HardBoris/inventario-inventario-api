@@ -1,9 +1,11 @@
 import {
   Column,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   TableInheritance,
 } from "typeorm";
+import { Movement } from "./movement";
 
 @Entity("items")
 @TableInheritance({ column: { type: "varchar", name: "type" } })
@@ -25,4 +27,7 @@ export class Item {
 
   @Column({ default: 1 })
   idealStock?: number;
+
+  @OneToMany(() => Movement, (move) => move.item)
+  moves: Movement[];
 }
