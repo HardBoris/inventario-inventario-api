@@ -3,6 +3,7 @@ import materialService from "./material.service";
 import accessoryService from "./accessory.service";
 import midiaService from "./midia.service";
 import toolService from "./tool.service";
+import moveService from "./movement.service";
 
 export {
   itemService,
@@ -10,4 +11,5 @@ export {
   accessoryService,
   midiaService,
   toolService,
+  moveService,
 };
