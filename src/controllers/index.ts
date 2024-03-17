@@ -3,6 +3,7 @@ import materialController from "./material.controller";
 import accessoryController from "./accessory.controller";
 import midiaController from "./midia.controller";
 import toolController from "./tool.controller";
+import moveController from "./movement.controller";
 
 export {
   itemController,
@@ -10,4 +11,5 @@ export {
   accessoryController,
   midiaController,
   toolController,
+  moveController,
 };
