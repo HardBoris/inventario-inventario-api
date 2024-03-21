@@ -3,12 +3,12 @@ import { midiaController } from "../controllers";
 
 const midiaRouter = Router();
 
-midiaRouter.post("/inventario/midias/register", midiaController.midiaCreator);
+midiaRouter.post("/midias/register", midiaController.midiaCreator);
 
-midiaRouter.get("/inventario/midias", midiaController.midiasList);
+midiaRouter.get("/midias", midiaController.midiasList);
 
-midiaRouter.get("/inventario/midias/:itemId", midiaController.midiaLoader);
+midiaRouter.get("/midias/:itemId", midiaController.midiaLoader);
 
-midiaRouter.delete("/inventario/midias/:itemId", midiaController.midiaDeletor);
+midiaRouter.delete("/midias/:itemId", midiaController.midiaDeletor);
 
 export default midiaRouter;

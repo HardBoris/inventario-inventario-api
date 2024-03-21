@@ -4,22 +4,19 @@ import { accessoryController } from "../controllers";
 const accessoryRouter = Router();
 
 accessoryRouter.post(
-  "/inventario/accessories/register",
+  "/accessories/register",
   accessoryController.accessoryCreator
 );
 
-accessoryRouter.get(
-  "/inventario/accessories",
-  accessoryController.accessoriesList
-);
+accessoryRouter.get("/accessories", accessoryController.accessoriesList);
 
 accessoryRouter.get(
-  "/inventario/accessories/:itemId",
+  "/accessories/:itemId",
   accessoryController.accessoryLoader
 );
 
 accessoryRouter.delete(
-  "/inventario/accessories/:itemId",
+  "/accessories/:itemId",
   accessoryController.accessoryDeletor
 );
 

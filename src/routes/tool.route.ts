@@ -3,12 +3,12 @@ import { toolController } from "../controllers";
 
 const toolRouter = Router();
 
-toolRouter.post("/inventario/tools/register", toolController.toolCreator);
+toolRouter.post("/tools/register", toolController.toolCreator);
 
-toolRouter.get("/inventario/tools", toolController.toolsList);
+toolRouter.get("/tools", toolController.toolsList);
 
-toolRouter.get("/inventario/tools/:itemId", toolController.toolLoader);
+toolRouter.get("/tools/:itemId", toolController.toolLoader);
 
-toolRouter.delete("/inventario/tools/:itemId", toolController.toolDeletor);
+toolRouter.delete("/tools/:itemId", toolController.toolDeletor);
 
 export default toolRouter;
