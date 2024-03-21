@@ -4,19 +4,22 @@ import { accessoryController } from "../controllers";
 const accessoryRouter = Router();
 
 accessoryRouter.post(
-  "/accessories/register",
+  "/oikos-stock-api/accessories/register",
   accessoryController.accessoryCreator
 );
 
-accessoryRouter.get("/accessories", accessoryController.accessoriesList);
+accessoryRouter.get(
+  "/oikos-stock-api/accessories",
+  accessoryController.accessoriesList
+);
 
 accessoryRouter.get(
-  "/accessories/:itemId",
+  "/oikos-stock-api/accessories/:itemId",
   accessoryController.accessoryLoader
 );
 
 accessoryRouter.delete(
-  "/accessories/:itemId",
+  "/oikos-stock-api/accessories/:itemId",
   accessoryController.accessoryDeletor
 );
 

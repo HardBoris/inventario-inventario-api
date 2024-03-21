@@ -3,12 +3,12 @@ import { moveController } from "../controllers";
 
 const moveRouter = Router();
 
-moveRouter.post("/moves/register", moveController.moveCreator);
+moveRouter.post("/oikos-stock-api/moves/register", moveController.moveCreator);
 
-moveRouter.get("/moves", moveController.movesList);
+moveRouter.get("/oikos-stock-api/moves", moveController.movesList);
 
-moveRouter.get("/moves/:moveId", moveController.moveLoader);
+moveRouter.get("/oikos-stock-api/moves/:moveId", moveController.moveLoader);
 
-moveRouter.delete("/moves/:moveId", moveController.moveDeletor);
+moveRouter.delete("/oikos-stock-api/moves/:moveId", moveController.moveDeletor);
 
 export default moveRouter;

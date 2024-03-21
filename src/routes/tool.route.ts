@@ -3,12 +3,12 @@ import { toolController } from "../controllers";
 
 const toolRouter = Router();
 
-toolRouter.post("/tools/register", toolController.toolCreator);
+toolRouter.post("/oikos-stock-api/tools/register", toolController.toolCreator);
 
-toolRouter.get("/tools", toolController.toolsList);
+toolRouter.get("/oikos-stock-api/tools", toolController.toolsList);
 
-toolRouter.get("/tools/:itemId", toolController.toolLoader);
+toolRouter.get("/oikos-stock-api/tools/:itemId", toolController.toolLoader);
 
-toolRouter.delete("/tools/:itemId", toolController.toolDeletor);
+toolRouter.delete("/oikos-stock-api/tools/:itemId", toolController.toolDeletor);
 
 export default toolRouter;
