@@ -12,6 +12,16 @@ class ItemController {
     return res.status(status).json(moves);
   };
 
+  itemHistory = async (req: Request, res: Response) => {
+    const { status, history } = await moveService.itemHistory(req);
+    return res.status(status).json(history);
+  };
+
+  reference = async (req: Request, res: Response) => {
+    const { status, reference } = await moveService.reference(req);
+    return res.status(status).json(reference);
+  };
+
   moveLoader = async (req: Request, res: Response) => {
     const { status, move } = await moveService.moveLoader(req);
     return res.status(status).json(move);

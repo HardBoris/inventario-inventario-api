@@ -7,6 +7,16 @@ moveRouter.post("/oikos-stock-api/moves/register", moveController.moveCreator);
 
 moveRouter.get("/oikos-stock-api/moves", moveController.movesList);
 
+moveRouter.get(
+  "/oikos-stock-api/moves/history/:itemId",
+  moveController.itemHistory
+);
+
+moveRouter.get(
+  "/oikos-stock-api/moves/reference/:reference",
+  moveController.reference
+);
+
 moveRouter.get("/oikos-stock-api/moves/:moveId", moveController.moveLoader);
 
 moveRouter.delete("/oikos-stock-api/moves/:moveId", moveController.moveDeletor);

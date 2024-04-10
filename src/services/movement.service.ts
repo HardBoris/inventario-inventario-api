@@ -18,6 +18,27 @@ class MovementService {
     };
   };
 
+  /* funcion para buscar el historico de un item */
+  itemHistory = async (req: Request) => {
+    const history: Movement[] = await moveRepository.history({
+      item: { itemId: req.params.itemId },
+    });
+    return {
+      status: 200,
+      history: history,
+    };
+  };
+
+  reference = async (req: Request) => {
+    const reference: Movement[] = await moveRepository.reference({
+      reference: req.params.reference,
+    });
+    return {
+      status: 200,
+      reference: reference,
+    };
+  };
+
   moveLoader = async (req: Request) => {
     const move: Movement = await moveRepository.findOne({
       moveId: req.params.moveId,
